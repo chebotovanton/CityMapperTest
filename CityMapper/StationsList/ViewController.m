@@ -2,6 +2,7 @@
 #import "StationsListControllerProtocol.h"
 #import "StationCell.h"
 #import "StationsListPresenter.h"
+#import "FacilitiesCell.h"
 
 @interface ViewController() <StationsListControllerProtocol, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
@@ -22,6 +23,7 @@
 
     //warning: Don't like this. ViewController knows about all cells and their nibs. Try to avoid this
     [self.collectionView registerNib:[UINib nibWithNibName:@"StationCell" bundle:nil] forCellWithReuseIdentifier:[StationCell reuseIdentifier]];
+    [self.collectionView registerNib:[UINib nibWithNibName:@"FacilitiesCell" bundle:nil] forCellWithReuseIdentifier:[FacilitiesCell reuseIdentifier]];
 
     self.presenter = [StationsListPresenter new];
     self.presenter.viewController = self;

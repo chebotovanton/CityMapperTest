@@ -12,10 +12,6 @@
     return @"stationCell";
 }
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-}
-
 - (void)setupWith:(nonnull Station *)station {
     self.nameLabel.text = station.name;
 }

@@ -17,7 +17,7 @@
 }
 
 - (CGFloat)cellHeight {
-    return 50;
+    return 40;
 }
 
 - (nonnull UICollectionViewCell *)cellFor:(UICollectionView *)collectionView indexPath:(NSIndexPath *)indexPath {

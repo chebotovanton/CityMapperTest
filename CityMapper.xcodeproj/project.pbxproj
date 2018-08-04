@@ -29,6 +29,9 @@
 		9F2E6FE521159B9D00441C1B /* StationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E6FE321159B9D00441C1B /* StationCell.m */; };
 		9F2E6FE621159B9D00441C1B /* StationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F2E6FE421159B9D00441C1B /* StationCell.xib */; };
 		9F2E6FEA2115E78400441C1B /* StationsParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E6FE92115E78400441C1B /* StationsParser.m */; };
+		9F2E6FEE2115FAAF00441C1B /* FacilitiesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E6FEC2115FAAF00441C1B /* FacilitiesCell.m */; };
+		9F2E6FEF2115FAAF00441C1B /* FacilitiesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F2E6FED2115FAAF00441C1B /* FacilitiesCell.xib */; };
+		9F2E6FF3211624B100441C1B /* UIImage+ImageWithColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E6FF2211624B100441C1B /* UIImage+ImageWithColor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +97,11 @@
 		9F2E6FE421159B9D00441C1B /* StationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StationCell.xib; sourceTree = "<group>"; };
 		9F2E6FE82115E78400441C1B /* StationsParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StationsParser.h; sourceTree = "<group>"; };
 		9F2E6FE92115E78400441C1B /* StationsParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StationsParser.m; sourceTree = "<group>"; };
+		9F2E6FEB2115FAAF00441C1B /* FacilitiesCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FacilitiesCell.h; sourceTree = "<group>"; };
+		9F2E6FEC2115FAAF00441C1B /* FacilitiesCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FacilitiesCell.m; sourceTree = "<group>"; };
+		9F2E6FED2115FAAF00441C1B /* FacilitiesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FacilitiesCell.xib; sourceTree = "<group>"; };
+		9F2E6FF1211624B100441C1B /* UIImage+ImageWithColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageWithColor.h"; sourceTree = "<group>"; };
+		9F2E6FF2211624B100441C1B /* UIImage+ImageWithColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageWithColor.m"; sourceTree = "<group>"; };
 		BF4F62023941D77FC2EB0E0E /* Pods_CityMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CityMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4146F351FAA93B23550C354 /* Pods-CityMapper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityMapper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CityMapper/Pods-CityMapper.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,6 +157,7 @@
 		9F2E6F882114B73400441C1B /* CityMapper */ = {
 			isa = PBXGroup;
 			children = (
+				9F2E6FF02116249700441C1B /* Utils */,
 				9F2E6FCA2114C7BB00441C1B /* LocationManager */,
 				9F2E6FC62114C76C00441C1B /* StationsList */,
 				9F2E6FBB2114B7D100441C1B /* API */,
@@ -244,8 +253,20 @@
 				9F2E6FE221159B9D00441C1B /* StationCell.h */,
 				9F2E6FE321159B9D00441C1B /* StationCell.m */,
 				9F2E6FE421159B9D00441C1B /* StationCell.xib */,
+				9F2E6FEB2115FAAF00441C1B /* FacilitiesCell.h */,
+				9F2E6FEC2115FAAF00441C1B /* FacilitiesCell.m */,
+				9F2E6FED2115FAAF00441C1B /* FacilitiesCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		9F2E6FF02116249700441C1B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9F2E6FF1211624B100441C1B /* UIImage+ImageWithColor.h */,
+				9F2E6FF2211624B100441C1B /* UIImage+ImageWithColor.m */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		C1AAD46FADAD4C52F6DD7F5B /* Frameworks */ = {
@@ -374,6 +395,7 @@
 				9F2E6F932114B73500441C1B /* Assets.xcassets in Resources */,
 				9F2E6FE621159B9D00441C1B /* StationCell.xib in Resources */,
 				9F2E6F912114B73400441C1B /* Main.storyboard in Resources */,
+				9F2E6FEF2115FAAF00441C1B /* FacilitiesCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,7 +466,9 @@
 				9F2E6FDC211580E800441C1B /* StationsListItemsFactory.m in Sources */,
 				9F2E6FEA2115E78400441C1B /* StationsParser.m in Sources */,
 				9F2E6F8E2114B73400441C1B /* ViewController.m in Sources */,
+				9F2E6FF3211624B100441C1B /* UIImage+ImageWithColor.m in Sources */,
 				9F2E6FC52114B9F000441C1B /* Station.m in Sources */,
+				9F2E6FEE2115FAAF00441C1B /* FacilitiesCell.m in Sources */,
 				9F2E6F992114B73500441C1B /* main.m in Sources */,
 				9F2E6FD8211580B600441C1B /* TrainItem.m in Sources */,
 				9F2E6FDF2115824E00441C1B /* Facility.m in Sources */,
