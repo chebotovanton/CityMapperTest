@@ -26,6 +26,9 @@
 		9F2E6FD8211580B600441C1B /* TrainItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E6FD7211580B600441C1B /* TrainItem.m */; };
 		9F2E6FDC211580E800441C1B /* StationsListItemsFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E6FDB211580E800441C1B /* StationsListItemsFactory.m */; };
 		9F2E6FDF2115824E00441C1B /* Facility.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E6FDE2115824E00441C1B /* Facility.m */; };
+		9F2E6FE521159B9D00441C1B /* StationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E6FE321159B9D00441C1B /* StationCell.m */; };
+		9F2E6FE621159B9D00441C1B /* StationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F2E6FE421159B9D00441C1B /* StationCell.xib */; };
+		9F2E6FEA2115E78400441C1B /* StationsParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E6FE92115E78400441C1B /* StationsParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +89,11 @@
 		9F2E6FDE2115824E00441C1B /* Facility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Facility.m; sourceTree = "<group>"; };
 		9F2E6FE02115848800441C1B /* CollectionItemProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionItemProtocol.h; sourceTree = "<group>"; };
 		9F2E6FE1211588FE00441C1B /* StationsListControllerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StationsListControllerProtocol.h; sourceTree = "<group>"; };
+		9F2E6FE221159B9D00441C1B /* StationCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StationCell.h; sourceTree = "<group>"; };
+		9F2E6FE321159B9D00441C1B /* StationCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StationCell.m; sourceTree = "<group>"; };
+		9F2E6FE421159B9D00441C1B /* StationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StationCell.xib; sourceTree = "<group>"; };
+		9F2E6FE82115E78400441C1B /* StationsParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StationsParser.h; sourceTree = "<group>"; };
+		9F2E6FE92115E78400441C1B /* StationsParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StationsParser.m; sourceTree = "<group>"; };
 		BF4F62023941D77FC2EB0E0E /* Pods_CityMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CityMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4146F351FAA93B23550C354 /* Pods-CityMapper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityMapper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CityMapper/Pods-CityMapper.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -146,8 +154,6 @@
 				9F2E6FBB2114B7D100441C1B /* API */,
 				9F2E6F892114B73400441C1B /* AppDelegate.h */,
 				9F2E6F8A2114B73400441C1B /* AppDelegate.m */,
-				9F2E6F8C2114B73400441C1B /* ViewController.h */,
-				9F2E6F8D2114B73400441C1B /* ViewController.m */,
 				9F2E6F8F2114B73400441C1B /* Main.storyboard */,
 				9F2E6F922114B73500441C1B /* Assets.xcassets */,
 				9F2E6F942114B73500441C1B /* LaunchScreen.storyboard */,
@@ -187,6 +193,8 @@
 				9F2E6FC22114B9B900441C1B /* StationsInfoLoaderDelegate.h */,
 				9F2E6FBF2114B93B00441C1B /* StationsInfoLoader.h */,
 				9F2E6FC02114B93B00441C1B /* StationsInfoLoader.m */,
+				9F2E6FE82115E78400441C1B /* StationsParser.h */,
+				9F2E6FE92115E78400441C1B /* StationsParser.m */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -194,6 +202,9 @@
 		9F2E6FC62114C76C00441C1B /* StationsList */ = {
 			isa = PBXGroup;
 			children = (
+				9F2E6F8C2114B73400441C1B /* ViewController.h */,
+				9F2E6F8D2114B73400441C1B /* ViewController.m */,
+				9F2E6FE721159BA300441C1B /* Cells */,
 				9F2E6FD9211580BE00441C1B /* TableItemsFactory */,
 				9F2E6FC72114C78000441C1B /* StationsListPresenter.h */,
 				9F2E6FC82114C78000441C1B /* StationsListPresenter.m */,
@@ -225,6 +236,16 @@
 				9F2E6FD7211580B600441C1B /* TrainItem.m */,
 			);
 			path = TableItemsFactory;
+			sourceTree = "<group>";
+		};
+		9F2E6FE721159BA300441C1B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9F2E6FE221159B9D00441C1B /* StationCell.h */,
+				9F2E6FE321159B9D00441C1B /* StationCell.m */,
+				9F2E6FE421159B9D00441C1B /* StationCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		C1AAD46FADAD4C52F6DD7F5B /* Frameworks */ = {
@@ -351,6 +372,7 @@
 			files = (
 				9F2E6F962114B73500441C1B /* LaunchScreen.storyboard in Resources */,
 				9F2E6F932114B73500441C1B /* Assets.xcassets in Resources */,
+				9F2E6FE621159B9D00441C1B /* StationCell.xib in Resources */,
 				9F2E6F912114B73400441C1B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,6 +442,7 @@
 				9F2E6FC92114C78000441C1B /* StationsListPresenter.m in Sources */,
 				9F2E6FC12114B93B00441C1B /* StationsInfoLoader.m in Sources */,
 				9F2E6FDC211580E800441C1B /* StationsListItemsFactory.m in Sources */,
+				9F2E6FEA2115E78400441C1B /* StationsParser.m in Sources */,
 				9F2E6F8E2114B73400441C1B /* ViewController.m in Sources */,
 				9F2E6FC52114B9F000441C1B /* Station.m in Sources */,
 				9F2E6F992114B73500441C1B /* main.m in Sources */,
@@ -427,6 +450,7 @@
 				9F2E6FDF2115824E00441C1B /* Facility.m in Sources */,
 				9F2E6FD5211580A900441C1B /* FacilityItem.m in Sources */,
 				9F2E6FBE2114B7E500441C1B /* ApiKeyStorage.m in Sources */,
+				9F2E6FE521159B9D00441C1B /* StationCell.m in Sources */,
 				9F2E6F8B2114B73400441C1B /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

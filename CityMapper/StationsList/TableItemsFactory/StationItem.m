@@ -1,4 +1,5 @@
 #import "StationItem.h"
+#import "StationCell.h"
 
 @interface StationItem()
 
@@ -16,12 +17,16 @@
 }
 
 - (CGFloat)cellHeight {
-    return 100;
+    return 50;
 }
 
-- (nonnull UICollectionViewCell *)cell {
-//warning: return something real
-    return [UICollectionViewCell new];
+- (nonnull UICollectionViewCell *)cellFor:(UICollectionView *)collectionView indexPath:(NSIndexPath *)indexPath {
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:[StationCell reuseIdentifier] forIndexPath:indexPath];
+    if ([cell isKindOfClass:[StationCell class]]) {
+        StationCell *stationCell = (StationCell *)cell;
+        [stationCell setupWith:self.station];
+    }
+    return cell;
 }
 
 @end

@@ -1,6 +1,7 @@
 #import "StationsInfoLoader.h"
 #import <AFNetworking/AFNetworking.h>
 #import "ApiKeyStorage.h"
+#import "StationsParser.h"
 
 @implementation StationsInfoLoader
 
@@ -14,7 +15,12 @@
                                            uploadProgress:nil
                                          downloadProgress:nil
                                         completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
-                                            NSLog(@"success");
+                                            if (error != nil) {
+                                                [self.delegate didFailLoadingStations];
+                                            } else {
+                                                NSArray <Station *> *stations = [StationsParser stationsFrom:responseObject];
+                                                [self.delegate didLoadStations:stations];
+                                            }
                                         }];
 
     [task resume];
@@ -25,14 +31,16 @@
     NSDictionary *params = @{@"app_id" : [ApiKeyStorage appId],
                              @"app_key" : [ApiKeyStorage appKey],
                              @"radius" : @1000,
-                             @"modes" : @[@"tube"],
+                             @"modes" : @"tube",
                              @"lon" : @(-0.1342989),
                              @"lat" : @51.5102296,
-                             @"stoptypes" : @[@"NaptanMetroStation", @"NaptanRailStation"]};
-    return [[AFHTTPRequestSerializer serializer] requestWithMethod:@"GET"
-                                                         URLString:baseString
-                                                        parameters:params
-                                                             error:nil];
+                             @"stoptypes" : @"NaptanMetroStation,NaptanRailStation"};
+
+    NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] requestWithMethod:@"GET"
+                                                                                 URLString:baseString
+                                                                                parameters:params
+                                                                                     error:nil];
+    return request;
 }
 
 @end

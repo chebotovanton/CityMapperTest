@@ -40,4 +40,9 @@
     [self.viewController updateList:items];
 }
 
+- (void)didFailLoadingStations
+{
+    [self.viewController presentError:@"Could not load stations. Try use VPN"];
+}
+
 @end

@@ -6,6 +6,7 @@
 @protocol StationsInfoLoaderDelegate <NSObject>
 
 - (void)didLoadStations:(NSArray <Station *> *)stations;
+- (void)didFailLoadingStations;
 
 @end
 
