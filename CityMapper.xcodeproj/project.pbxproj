@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		679B290003CC20C62F6C3438 /* Pods_CityMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF4F62023941D77FC2EB0E0E /* Pods_CityMapper.framework */; };
 		9F2E6F8B2114B73400441C1B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E6F8A2114B73400441C1B /* AppDelegate.m */; };
 		9F2E6F8E2114B73400441C1B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E6F8D2114B73400441C1B /* ViewController.m */; };
 		9F2E6F912114B73400441C1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F2E6F8F2114B73400441C1B /* Main.storyboard */; };
@@ -15,6 +16,16 @@
 		9F2E6F992114B73500441C1B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E6F982114B73500441C1B /* main.m */; };
 		9F2E6FA32114B73500441C1B /* CityMapperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E6FA22114B73500441C1B /* CityMapperTests.m */; };
 		9F2E6FAE2114B73500441C1B /* CityMapperUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E6FAD2114B73500441C1B /* CityMapperUITests.m */; };
+		9F2E6FBE2114B7E500441C1B /* ApiKeyStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E6FBD2114B7E500441C1B /* ApiKeyStorage.m */; };
+		9F2E6FC12114B93B00441C1B /* StationsInfoLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E6FC02114B93B00441C1B /* StationsInfoLoader.m */; };
+		9F2E6FC52114B9F000441C1B /* Station.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E6FC42114B9F000441C1B /* Station.m */; };
+		9F2E6FC92114C78000441C1B /* StationsListPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E6FC82114C78000441C1B /* StationsListPresenter.m */; };
+		9F2E6FCD2114C7D200441C1B /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E6FCC2114C7D200441C1B /* LocationManager.m */; };
+		9F2E6FD22115808D00441C1B /* StationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E6FD12115808D00441C1B /* StationItem.m */; };
+		9F2E6FD5211580A900441C1B /* FacilityItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E6FD4211580A900441C1B /* FacilityItem.m */; };
+		9F2E6FD8211580B600441C1B /* TrainItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E6FD7211580B600441C1B /* TrainItem.m */; };
+		9F2E6FDC211580E800441C1B /* StationsListItemsFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E6FDB211580E800441C1B /* StationsListItemsFactory.m */; };
+		9F2E6FDF2115824E00441C1B /* Facility.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E6FDE2115824E00441C1B /* Facility.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		39200C53EFB518E16E039800 /* Pods-CityMapper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityMapper.release.xcconfig"; path = "Pods/Target Support Files/Pods-CityMapper/Pods-CityMapper.release.xcconfig"; sourceTree = "<group>"; };
 		9F2E6F862114B73400441C1B /* CityMapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CityMapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F2E6F892114B73400441C1B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9F2E6F8A2114B73400441C1B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +63,31 @@
 		9F2E6FA92114B73500441C1B /* CityMapperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CityMapperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F2E6FAD2114B73500441C1B /* CityMapperUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CityMapperUITests.m; sourceTree = "<group>"; };
 		9F2E6FAF2114B73500441C1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F2E6FBC2114B7E500441C1B /* ApiKeyStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiKeyStorage.h; sourceTree = "<group>"; };
+		9F2E6FBD2114B7E500441C1B /* ApiKeyStorage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApiKeyStorage.m; sourceTree = "<group>"; };
+		9F2E6FBF2114B93B00441C1B /* StationsInfoLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StationsInfoLoader.h; sourceTree = "<group>"; };
+		9F2E6FC02114B93B00441C1B /* StationsInfoLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StationsInfoLoader.m; sourceTree = "<group>"; };
+		9F2E6FC22114B9B900441C1B /* StationsInfoLoaderDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StationsInfoLoaderDelegate.h; sourceTree = "<group>"; };
+		9F2E6FC32114B9F000441C1B /* Station.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Station.h; sourceTree = "<group>"; };
+		9F2E6FC42114B9F000441C1B /* Station.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Station.m; sourceTree = "<group>"; };
+		9F2E6FC72114C78000441C1B /* StationsListPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StationsListPresenter.h; sourceTree = "<group>"; };
+		9F2E6FC82114C78000441C1B /* StationsListPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StationsListPresenter.m; sourceTree = "<group>"; };
+		9F2E6FCB2114C7D200441C1B /* LocationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
+		9F2E6FCC2114C7D200441C1B /* LocationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
+		9F2E6FD02115808D00441C1B /* StationItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StationItem.h; sourceTree = "<group>"; };
+		9F2E6FD12115808D00441C1B /* StationItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StationItem.m; sourceTree = "<group>"; };
+		9F2E6FD3211580A800441C1B /* FacilityItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FacilityItem.h; sourceTree = "<group>"; };
+		9F2E6FD4211580A900441C1B /* FacilityItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FacilityItem.m; sourceTree = "<group>"; };
+		9F2E6FD6211580B600441C1B /* TrainItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainItem.h; sourceTree = "<group>"; };
+		9F2E6FD7211580B600441C1B /* TrainItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainItem.m; sourceTree = "<group>"; };
+		9F2E6FDA211580E800441C1B /* StationsListItemsFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StationsListItemsFactory.h; sourceTree = "<group>"; };
+		9F2E6FDB211580E800441C1B /* StationsListItemsFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StationsListItemsFactory.m; sourceTree = "<group>"; };
+		9F2E6FDD2115824E00441C1B /* Facility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Facility.h; sourceTree = "<group>"; };
+		9F2E6FDE2115824E00441C1B /* Facility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Facility.m; sourceTree = "<group>"; };
+		9F2E6FE02115848800441C1B /* CollectionItemProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionItemProtocol.h; sourceTree = "<group>"; };
+		9F2E6FE1211588FE00441C1B /* StationsListControllerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StationsListControllerProtocol.h; sourceTree = "<group>"; };
+		BF4F62023941D77FC2EB0E0E /* Pods_CityMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CityMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4146F351FAA93B23550C354 /* Pods-CityMapper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityMapper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CityMapper/Pods-CityMapper.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				679B290003CC20C62F6C3438 /* Pods_CityMapper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +123,8 @@
 				9F2E6FA12114B73500441C1B /* CityMapperTests */,
 				9F2E6FAC2114B73500441C1B /* CityMapperUITests */,
 				9F2E6F872114B73400441C1B /* Products */,
+				CDD2695D38EDBAF508309005 /* Pods */,
+				C1AAD46FADAD4C52F6DD7F5B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +141,9 @@
 		9F2E6F882114B73400441C1B /* CityMapper */ = {
 			isa = PBXGroup;
 			children = (
+				9F2E6FCA2114C7BB00441C1B /* LocationManager */,
+				9F2E6FC62114C76C00441C1B /* StationsList */,
+				9F2E6FBB2114B7D100441C1B /* API */,
 				9F2E6F892114B73400441C1B /* AppDelegate.h */,
 				9F2E6F8A2114B73400441C1B /* AppDelegate.m */,
 				9F2E6F8C2114B73400441C1B /* ViewController.h */,
@@ -132,6 +175,75 @@
 			path = CityMapperUITests;
 			sourceTree = "<group>";
 		};
+		9F2E6FBB2114B7D100441C1B /* API */ = {
+			isa = PBXGroup;
+			children = (
+				9F2E6FDD2115824E00441C1B /* Facility.h */,
+				9F2E6FDE2115824E00441C1B /* Facility.m */,
+				9F2E6FC32114B9F000441C1B /* Station.h */,
+				9F2E6FC42114B9F000441C1B /* Station.m */,
+				9F2E6FBC2114B7E500441C1B /* ApiKeyStorage.h */,
+				9F2E6FBD2114B7E500441C1B /* ApiKeyStorage.m */,
+				9F2E6FC22114B9B900441C1B /* StationsInfoLoaderDelegate.h */,
+				9F2E6FBF2114B93B00441C1B /* StationsInfoLoader.h */,
+				9F2E6FC02114B93B00441C1B /* StationsInfoLoader.m */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		9F2E6FC62114C76C00441C1B /* StationsList */ = {
+			isa = PBXGroup;
+			children = (
+				9F2E6FD9211580BE00441C1B /* TableItemsFactory */,
+				9F2E6FC72114C78000441C1B /* StationsListPresenter.h */,
+				9F2E6FC82114C78000441C1B /* StationsListPresenter.m */,
+				9F2E6FE1211588FE00441C1B /* StationsListControllerProtocol.h */,
+			);
+			path = StationsList;
+			sourceTree = "<group>";
+		};
+		9F2E6FCA2114C7BB00441C1B /* LocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				9F2E6FCB2114C7D200441C1B /* LocationManager.h */,
+				9F2E6FCC2114C7D200441C1B /* LocationManager.m */,
+			);
+			path = LocationManager;
+			sourceTree = "<group>";
+		};
+		9F2E6FD9211580BE00441C1B /* TableItemsFactory */ = {
+			isa = PBXGroup;
+			children = (
+				9F2E6FDA211580E800441C1B /* StationsListItemsFactory.h */,
+				9F2E6FDB211580E800441C1B /* StationsListItemsFactory.m */,
+				9F2E6FE02115848800441C1B /* CollectionItemProtocol.h */,
+				9F2E6FD02115808D00441C1B /* StationItem.h */,
+				9F2E6FD12115808D00441C1B /* StationItem.m */,
+				9F2E6FD3211580A800441C1B /* FacilityItem.h */,
+				9F2E6FD4211580A900441C1B /* FacilityItem.m */,
+				9F2E6FD6211580B600441C1B /* TrainItem.h */,
+				9F2E6FD7211580B600441C1B /* TrainItem.m */,
+			);
+			path = TableItemsFactory;
+			sourceTree = "<group>";
+		};
+		C1AAD46FADAD4C52F6DD7F5B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF4F62023941D77FC2EB0E0E /* Pods_CityMapper.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CDD2695D38EDBAF508309005 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E4146F351FAA93B23550C354 /* Pods-CityMapper.debug.xcconfig */,
+				39200C53EFB518E16E039800 /* Pods-CityMapper.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +251,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F2E6FB22114B73500441C1B /* Build configuration list for PBXNativeTarget "CityMapper" */;
 			buildPhases = (
+				61B982923CECEE7E7C0254D5 /* [CP] Check Pods Manifest.lock */,
 				9F2E6F822114B73400441C1B /* Sources */,
 				9F2E6F832114B73400441C1B /* Frameworks */,
 				9F2E6F842114B73400441C1B /* Resources */,
+				B7D0C3C3754396A0494E75E9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -257,13 +371,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		61B982923CECEE7E7C0254D5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CityMapper-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7D0C3C3754396A0494E75E9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CityMapper/Pods-CityMapper-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CityMapper/Pods-CityMapper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9F2E6F822114B73400441C1B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F2E6FCD2114C7D200441C1B /* LocationManager.m in Sources */,
+				9F2E6FD22115808D00441C1B /* StationItem.m in Sources */,
+				9F2E6FC92114C78000441C1B /* StationsListPresenter.m in Sources */,
+				9F2E6FC12114B93B00441C1B /* StationsInfoLoader.m in Sources */,
+				9F2E6FDC211580E800441C1B /* StationsListItemsFactory.m in Sources */,
 				9F2E6F8E2114B73400441C1B /* ViewController.m in Sources */,
+				9F2E6FC52114B9F000441C1B /* Station.m in Sources */,
 				9F2E6F992114B73500441C1B /* main.m in Sources */,
+				9F2E6FD8211580B600441C1B /* TrainItem.m in Sources */,
+				9F2E6FDF2115824E00441C1B /* Facility.m in Sources */,
+				9F2E6FD5211580A900441C1B /* FacilityItem.m in Sources */,
+				9F2E6FBE2114B7E500441C1B /* ApiKeyStorage.m in Sources */,
 				9F2E6F8B2114B73400441C1B /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,6 +594,7 @@
 		};
 		9F2E6FB32114B73500441C1B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4146F351FAA93B23550C354 /* Pods-CityMapper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -442,12 +606,13 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Chebotov.CityMapper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		9F2E6FB42114B73500441C1B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39200C53EFB518E16E039800 /* Pods-CityMapper.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -459,7 +624,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Chebotov.CityMapper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

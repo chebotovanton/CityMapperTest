@@ -1,0 +1,5 @@
+build/
+DerivedData
+Pods/
+xcuserdata
+CityMapper.xcworkspace/xcuserdata
