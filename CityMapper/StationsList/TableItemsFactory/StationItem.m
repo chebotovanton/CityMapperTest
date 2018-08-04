@@ -16,7 +16,7 @@
     return self;
 }
 
-- (CGFloat)cellHeight {
+- (CGFloat)cellHeightWithWidth:(CGFloat)width {
     return 40;
 }
 

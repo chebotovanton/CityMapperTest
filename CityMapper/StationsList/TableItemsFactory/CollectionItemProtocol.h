@@ -5,7 +5,7 @@
 
 @protocol CollectionItemProtocol
 
-- (CGFloat)cellHeight;
+- (CGFloat)cellHeightWithWidth:(CGFloat)width;
 - (nonnull UICollectionViewCell *)cellFor:(UICollectionView *)collectionView indexPath:(NSIndexPath *)indexPath;
 
 @end

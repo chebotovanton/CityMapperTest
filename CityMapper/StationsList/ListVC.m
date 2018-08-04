@@ -1,10 +1,10 @@
-#import "ViewController.h"
+#import "ListVC.h"
 #import "StationsListControllerProtocol.h"
 #import "StationCell.h"
 #import "StationsListPresenter.h"
 #import "FacilitiesCell.h"
 
-@interface ViewController() <StationsListControllerProtocol, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+@interface ListVC() <StationsListControllerProtocol, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 @property (weak) IBOutlet UICollectionView *collectionView;
 @property NSArray <id <CollectionItemProtocol>> *items;
@@ -12,7 +12,7 @@
 
 @end
 
-@implementation ViewController
+@implementation ListVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -62,7 +62,7 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     id <CollectionItemProtocol> item = self.items[indexPath.item];
 
-    return CGSizeMake(collectionView.frame.size.width, item.cellHeight);
+    return CGSizeMake(collectionView.frame.size.width, [item cellHeightWithWidth:collectionView.frame.size.width]);
 }
 
 @end

@@ -40,7 +40,33 @@
     return textColor;
 }
 
-- (void)setupWith:(nonnull NSArray <Facility *> *)facilities {
++ (CGFloat)heightWith:(nonnull NSArray <Facility *> *)facilities widthLimit:(CGFloat)widthLimit {
+    //WARNING: Avoid duplication
+    int rows = 0;
+    CGPoint origin = CGPointMake(15, 0);
+    CGFloat buttonHeight = 20;
+    CGFloat verticalOffset = 4;
+    CGFloat horizontalOffset = 4;
+
+    for (int i = 0; i < facilities.count; i++) {
+        Facility *facility = facilities[i];
+
+        CGFloat buttonWidth = [facility.name sizeWithAttributes:@{NSFontAttributeName : [FacilitiesCell titleFont]}].width + 20;
+
+        if (origin.x + buttonWidth > widthLimit) {
+            origin.x = 15;
+            rows += 1;
+            origin.y = rows * (buttonHeight + verticalOffset);
+        }
+
+        origin.x += buttonWidth;
+        origin.x += horizontalOffset;
+    }
+
+    return origin.y + buttonHeight;
+}
+
+- (void)setupWith:(nonnull NSArray <Facility *> *)facilities widthLimit:(CGFloat)widthLimit {
     //warning: uitests
     for (UIView *subview in self.subviews) {
         [subview removeFromSuperview];
@@ -49,7 +75,6 @@
     int rows = 0;
     CGPoint origin = CGPointMake(15, 0);
     CGFloat buttonHeight = 20;
-    CGFloat widthLimit = 350;
     CGFloat verticalOffset = 4;
     CGFloat horizontalOffset = 4;
 

@@ -4,6 +4,7 @@
 @interface FacilitiesCell : UICollectionViewCell
 
 + (NSString *)reuseIdentifier;
-- (void)setupWith:(nonnull NSArray <Facility *> *)facilities;
++ (CGFloat)heightWith:(nonnull NSArray <Facility *> *)facilities widthLimit:(CGFloat)widthLimit;
+- (void)setupWith:(nonnull NSArray <Facility *> *)facilities widthLimit:(CGFloat)widthLimit;
 
 @end
