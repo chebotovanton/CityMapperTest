@@ -40,6 +40,8 @@
 		9F2E70072116D5E600441C1B /* DateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E70062116D5E600441C1B /* DateFormatter.m */; };
 		9F2E700D2117256800441C1B /* TrainsSorter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E700C2117256800441C1B /* TrainsSorter.m */; };
 		9F2E700F21172E6900441C1B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F2E700E21172E6900441C1B /* Images.xcassets */; };
+		9F2E7012211744D500441C1B /* FacilitiesCellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E70102117444700441C1B /* FacilitiesCellTests.m */; };
+		E9883F4E20536603C43B822A /* Pods_CityMapperTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26118CC4A443B6D1A935E30F /* Pods_CityMapperTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +62,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		26118CC4A443B6D1A935E30F /* Pods_CityMapperTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CityMapperTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		39200C53EFB518E16E039800 /* Pods-CityMapper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityMapper.release.xcconfig"; path = "Pods/Target Support Files/Pods-CityMapper/Pods-CityMapper.release.xcconfig"; sourceTree = "<group>"; };
+		7B1BD3BB8B484C2F515264FC /* Pods-CityMapperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityMapperTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CityMapperTests/Pods-CityMapperTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9F2E6F862114B73400441C1B /* CityMapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CityMapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F2E6F892114B73400441C1B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9F2E6F8A2114B73400441C1B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -125,7 +129,9 @@
 		9F2E700B2117256800441C1B /* TrainsSorter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainsSorter.h; sourceTree = "<group>"; };
 		9F2E700C2117256800441C1B /* TrainsSorter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainsSorter.m; sourceTree = "<group>"; };
 		9F2E700E21172E6900441C1B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9F2E70102117444700441C1B /* FacilitiesCellTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FacilitiesCellTests.m; sourceTree = "<group>"; };
 		BF4F62023941D77FC2EB0E0E /* Pods_CityMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CityMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF8943424C9DA2A643E1CACA /* Pods-CityMapperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityMapperTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CityMapperTests/Pods-CityMapperTests.release.xcconfig"; sourceTree = "<group>"; };
 		E4146F351FAA93B23550C354 /* Pods-CityMapper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityMapper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CityMapper/Pods-CityMapper.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +148,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9883F4E20536603C43B822A /* Pods_CityMapperTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +206,7 @@
 		9F2E6FA12114B73500441C1B /* CityMapperTests */ = {
 			isa = PBXGroup;
 			children = (
+				9F2E70102117444700441C1B /* FacilitiesCellTests.m */,
 				9F2E6FA22114B73500441C1B /* CityMapperTests.m */,
 				9F2E6FA42114B73500441C1B /* Info.plist */,
 			);
@@ -327,6 +335,7 @@
 			isa = PBXGroup;
 			children = (
 				BF4F62023941D77FC2EB0E0E /* Pods_CityMapper.framework */,
+				26118CC4A443B6D1A935E30F /* Pods_CityMapperTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -336,6 +345,8 @@
 			children = (
 				E4146F351FAA93B23550C354 /* Pods-CityMapper.debug.xcconfig */,
 				39200C53EFB518E16E039800 /* Pods-CityMapper.release.xcconfig */,
+				7B1BD3BB8B484C2F515264FC /* Pods-CityMapperTests.debug.xcconfig */,
+				CF8943424C9DA2A643E1CACA /* Pods-CityMapperTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -366,9 +377,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F2E6FB52114B73500441C1B /* Build configuration list for PBXNativeTarget "CityMapperTests" */;
 			buildPhases = (
+				D028F1770B32750D58382A8D /* [CP] Check Pods Manifest.lock */,
 				9F2E6F9A2114B73500441C1B /* Sources */,
 				9F2E6F9B2114B73500441C1B /* Frameworks */,
 				9F2E6F9C2114B73500441C1B /* Resources */,
+				3D962EEFB9E21E6256A7BD88 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -472,6 +485,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3D962EEFB9E21E6256A7BD88 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CityMapperTests/Pods-CityMapperTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/iOSSnapshotTestCase/FBSnapshotTestCase.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSnapshotTestCase.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CityMapperTests/Pods-CityMapperTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		61B982923CECEE7E7C0254D5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -506,6 +537,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CityMapper/Pods-CityMapper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D028F1770B32750D58382A8D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CityMapperTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -545,6 +594,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F2E7012211744D500441C1B /* FacilitiesCellTests.m in Sources */,
 				9F2E6FA32114B73500441C1B /* CityMapperTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -710,10 +760,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 64AA6VGY67;
 				INFOPLIST_FILE = CityMapper/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Chebotov.CityMapper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -728,10 +775,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 64AA6VGY67;
 				INFOPLIST_FILE = CityMapper/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Chebotov.CityMapper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -740,16 +784,13 @@
 		};
 		9F2E6FB62114B73500441C1B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B1BD3BB8B484C2F515264FC /* Pods-CityMapperTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 64AA6VGY67;
 				INFOPLIST_FILE = CityMapperTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Chebotov.CityMapperTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -759,16 +800,13 @@
 		};
 		9F2E6FB72114B73500441C1B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF8943424C9DA2A643E1CACA /* Pods-CityMapperTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 64AA6VGY67;
 				INFOPLIST_FILE = CityMapperTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Chebotov.CityMapperTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -782,11 +820,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 64AA6VGY67;
 				INFOPLIST_FILE = CityMapperUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Chebotov.CityMapperUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -800,11 +834,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 64AA6VGY67;
 				INFOPLIST_FILE = CityMapperUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Chebotov.CityMapperUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

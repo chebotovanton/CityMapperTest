@@ -4,4 +4,6 @@
 
 @property (nonnull) NSString *name;
 
+- (id)initWithName:(NSString *)name;
+
 @end

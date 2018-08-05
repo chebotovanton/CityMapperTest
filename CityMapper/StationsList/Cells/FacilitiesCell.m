@@ -76,7 +76,6 @@ struct UISettings {
 }
 
 - (void)setupWith:(nonnull NSArray <Facility *> *)facilities widthLimit:(CGFloat)widthLimit {
-    //warning: uitests
     for (UIView *subview in self.subviews) {
         [subview removeFromSuperview];
     }
@@ -90,6 +89,7 @@ struct UISettings {
         [self addSubview:button];
 
         CGFloat buttonWidth = [facility.name sizeWithAttributes:@{NSFontAttributeName : [FacilitiesCell titleFont]}].width + settings.buttonInsets;
+        buttonWidth = MIN(buttonWidth, widthLimit - 2 * settings.containerInset);
         origin = [FacilitiesCell pointToDraw:buttonWidth settings:settings originPoint:origin widthLimit:widthLimit];
         button.frame = CGRectMake(origin.x, origin.y, buttonWidth, settings.buttonHeight);
         origin.x += buttonWidth;

@@ -6,3 +6,7 @@ use_frameworks!
 target 'CityMapper' do
     pod 'AFNetworking', '~> 3.0'
 end
+
+target 'CityMapperTests' do
+    pod 'iOSSnapshotTestCase/Core'
+end
