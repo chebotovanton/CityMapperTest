@@ -1,6 +1,14 @@
 #import "FacilitiesCell.h"
 #import "UIImage+ImageWithColor.h"
 
+struct UISettings {
+    CGFloat horizontalOffset;
+    CGFloat buttonHeight;
+    CGFloat verticalOffset;
+    CGFloat buttonInsets;
+    CGFloat containerInset;
+};
+
 @interface FacilitiesCell()
 
 @property NSArray <Facility *> *facilities;
@@ -40,30 +48,31 @@
     return textColor;
 }
 
++ (struct UISettings)defaultSettings {
+    struct UISettings settings;
+    settings.buttonHeight = 20;
+    settings.verticalOffset = 4;
+    settings.horizontalOffset = 4;
+    settings.buttonInsets = 10;
+    settings.containerInset = 10;
+
+    return settings;
+}
+
 + (CGFloat)heightWith:(nonnull NSArray <Facility *> *)facilities widthLimit:(CGFloat)widthLimit {
     //WARNING: Avoid duplication
-    int rows = 0;
-    CGPoint origin = CGPointMake(15, 0);
-    CGFloat buttonHeight = 20;
-    CGFloat verticalOffset = 4;
-    CGFloat horizontalOffset = 4;
+    struct UISettings settings = [self defaultSettings];
+    CGPoint origin = CGPointMake(settings.containerInset, 0);
 
     for (int i = 0; i < facilities.count; i++) {
         Facility *facility = facilities[i];
 
-        CGFloat buttonWidth = [facility.name sizeWithAttributes:@{NSFontAttributeName : [FacilitiesCell titleFont]}].width + 20;
-
-        if (origin.x + buttonWidth > widthLimit) {
-            origin.x = 15;
-            rows += 1;
-            origin.y = rows * (buttonHeight + verticalOffset);
-        }
-
-        origin.x += buttonWidth;
-        origin.x += horizontalOffset;
+        CGFloat buttonWidth = [facility.name sizeWithAttributes:@{NSFontAttributeName : [FacilitiesCell titleFont]}].width + settings.buttonInsets;
+        origin = [FacilitiesCell pointToDraw:buttonWidth settings:settings originPoint:origin widthLimit:widthLimit];        origin.x += buttonWidth;
+        origin.x += settings.horizontalOffset;
     }
 
-    return origin.y + buttonHeight;
+    return origin.y + settings.buttonHeight;
 }
 
 - (void)setupWith:(nonnull NSArray <Facility *> *)facilities widthLimit:(CGFloat)widthLimit {
@@ -72,29 +81,29 @@
         [subview removeFromSuperview];
     }
 
-    int rows = 0;
-    CGPoint origin = CGPointMake(15, 0);
-    CGFloat buttonHeight = 20;
-    CGFloat verticalOffset = 4;
-    CGFloat horizontalOffset = 4;
+    struct UISettings settings = [FacilitiesCell defaultSettings];
+    CGPoint origin = CGPointMake(settings.containerInset, 0);
 
     for (int i = 0; i < facilities.count; i++) {
         Facility *facility = facilities[i];
         UIButton *button = [self buttonWithTitle:facility.name];
         [self addSubview:button];
 
-        CGFloat buttonWidth = [facility.name sizeWithAttributes:@{NSFontAttributeName : [FacilitiesCell titleFont]}].width + 20;
-
-        if (origin.x + buttonWidth > widthLimit) {
-            origin.x = 15;
-            rows += 1;
-            origin.y = rows * (buttonHeight + verticalOffset);
-        }
-
-        button.frame = CGRectMake(origin.x, origin.y, buttonWidth, buttonHeight);
+        CGFloat buttonWidth = [facility.name sizeWithAttributes:@{NSFontAttributeName : [FacilitiesCell titleFont]}].width + settings.buttonInsets;
+        origin = [FacilitiesCell pointToDraw:buttonWidth settings:settings originPoint:origin widthLimit:widthLimit];
+        button.frame = CGRectMake(origin.x, origin.y, buttonWidth, settings.buttonHeight);
         origin.x += buttonWidth;
-        origin.x += horizontalOffset;
+        origin.x += settings.horizontalOffset;
     }
+}
+
++ (CGPoint)pointToDraw:(CGFloat)textWidth settings:(struct UISettings)settings originPoint:(CGPoint)origin widthLimit:(CGFloat)widthLimit {
+    if (origin.x + textWidth + settings.containerInset > widthLimit) {
+        origin.x = settings.containerInset;
+        origin.y += settings.buttonHeight + settings.verticalOffset;
+    }
+
+    return origin;
 }
 
 - (nonnull UIButton *)buttonWithTitle:(nonnull NSString *)title {
