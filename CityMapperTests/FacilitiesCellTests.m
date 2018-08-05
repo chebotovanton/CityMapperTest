@@ -14,7 +14,7 @@
 //    self.recordMode = YES;
 }
 
-- (void)testExample {
+- (void)testFacilitiesPosition {
     FacilitiesCell *cell = (FacilitiesCell *)[[[NSBundle mainBundle] loadNibNamed:@"FacilitiesCell" owner:nil options:nil] objectAtIndex:0];
     CGFloat width = 350;
     NSArray *facilities = [self fakeFacilities];
