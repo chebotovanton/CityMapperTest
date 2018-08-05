@@ -5,7 +5,6 @@
 
 @interface StationsListItemsFactory : NSObject
 
-+ (nonnull NSArray <id <CollectionItemProtocol>> *)convertStations:(nonnull NSArray <Station *> *)stations
-                                                            trains:(nullable NSArray <Train *> *)trains;
++ (nonnull NSArray <id <CollectionItemProtocol>> *)convertStations:(nonnull NSArray <Station *> *)stations;
 
 @end

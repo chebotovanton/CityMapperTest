@@ -38,6 +38,7 @@
 		9F2E70032116456600441C1B /* TrainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E70012116456600441C1B /* TrainCell.m */; };
 		9F2E70042116456600441C1B /* TrainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F2E70022116456600441C1B /* TrainCell.xib */; };
 		9F2E70072116D5E600441C1B /* DateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E70062116D5E600441C1B /* DateFormatter.m */; };
+		9F2E700D2117256800441C1B /* TrainsSorter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E700C2117256800441C1B /* TrainsSorter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +121,8 @@
 		9F2E70022116456600441C1B /* TrainCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainCell.xib; sourceTree = "<group>"; };
 		9F2E70052116D5E600441C1B /* DateFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DateFormatter.h; sourceTree = "<group>"; };
 		9F2E70062116D5E600441C1B /* DateFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateFormatter.m; sourceTree = "<group>"; };
+		9F2E700B2117256800441C1B /* TrainsSorter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainsSorter.h; sourceTree = "<group>"; };
+		9F2E700C2117256800441C1B /* TrainsSorter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainsSorter.m; sourceTree = "<group>"; };
 		BF4F62023941D77FC2EB0E0E /* Pods_CityMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CityMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4146F351FAA93B23550C354 /* Pods-CityMapper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityMapper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CityMapper/Pods-CityMapper.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -287,6 +290,8 @@
 				9F2E6FF2211624B100441C1B /* UIImage+ImageWithColor.m */,
 				9F2E70052116D5E600441C1B /* DateFormatter.h */,
 				9F2E70062116D5E600441C1B /* DateFormatter.m */,
+				9F2E700B2117256800441C1B /* TrainsSorter.h */,
+				9F2E700C2117256800441C1B /* TrainsSorter.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -514,6 +519,7 @@
 				9F2E6FDC211580E800441C1B /* StationsListItemsFactory.m in Sources */,
 				9F2E6FEA2115E78400441C1B /* StationsParser.m in Sources */,
 				9F2E6F8E2114B73400441C1B /* ListVC.m in Sources */,
+				9F2E700D2117256800441C1B /* TrainsSorter.m in Sources */,
 				9F2E6FF3211624B100441C1B /* UIImage+ImageWithColor.m in Sources */,
 				9F2E6FC52114B9F000441C1B /* Station.m in Sources */,
 				9F2E6FEE2115FAAF00441C1B /* FacilitiesCell.m in Sources */,

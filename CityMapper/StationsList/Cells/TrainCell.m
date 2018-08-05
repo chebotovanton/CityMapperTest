@@ -1,4 +1,5 @@
 #import "TrainCell.h"
+#import "DateFormatter.h"
 
 @interface TrainCell()
 
@@ -17,7 +18,7 @@
 - (void)setupWith:(nonnull Train *)train {
     self.lineNameLabel.text = train.lineName;
     self.platformLabel.text = train.platformName;
-    self.arrivalTimeLabel.text = @"3 min";
+    self.arrivalTimeLabel.text = [DateFormatter minutesStringBetween:train.arrivalDate andDate:[NSDate date]];
 }
 
 @end

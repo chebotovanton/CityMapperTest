@@ -5,8 +5,7 @@
 
 @implementation StationsListItemsFactory
 
-+ (nonnull NSArray <id <CollectionItemProtocol>> *)convertStations:(NSArray <Station *> *)stations
-                                                            trains:(NSArray *)trains {
++ (nonnull NSArray <id <CollectionItemProtocol>> *)convertStations:(NSArray <Station *> *)stations {
 
     //warning: tests!
 
@@ -17,7 +16,7 @@
         if (facilities.count > 0) {
             [result addObject:[[FacilityItem alloc] initWithFacilities:facilities]];
         }
-        for (Train *train in trains) {
+        for (Train *train in station.arrivingTrains) {
             [result addObject:[[TrainItem alloc] initWithTrain:train]];
         }
     }

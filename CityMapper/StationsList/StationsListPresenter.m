@@ -4,11 +4,11 @@
 #import "StationsInfoLoader.h"
 #import "StationsListItemsFactory.h"
 #import "TrainsLoader.h"
+#import "TrainsSorter.h"
 
 @interface StationsListPresenter () <StationsInfoLoaderDelegate, TrainsLoaderDelegate>
 
 @property (nullable) StationsInfoLoader *stationsInfoLoader;
-@property (nullable) TrainsLoader *trainsLoader;
 @property (nullable) NSArray <Station *> *stations;
 
 @end
@@ -25,10 +25,15 @@
 }
 
 - (void)startLoadingTrains {
-    Station *station = self.stations.firstObject;
-    self.trainsLoader = [TrainsLoader new];
-    self.trainsLoader.delegate = self;
-    [self.trainsLoader loadTrainsForStation:station];
+    for (Station *station in self.stations) {
+        [self loadTrainsForStation:station];
+    }
+}
+
+- (void)loadTrainsForStation:(nonnull Station *)station {
+    TrainsLoader *trainsLoader = [TrainsLoader new];
+    trainsLoader.delegate = self;
+    [trainsLoader loadTrainsForStation:station];
 }
 
 #pragma mark - Location Notification
@@ -40,7 +45,6 @@
         self.stationsInfoLoader.delegate = self;
 
         [self.stationsInfoLoader loadStationsWithLat:location.coordinate.latitude lon:location.coordinate.longitude];
-
     }
 }
 
@@ -48,7 +52,7 @@
 
 - (void)didLoadStations:(NSArray <Station *> *)stations {
     self.stations = stations;
-    NSArray <id <CollectionItemProtocol>> *items = [StationsListItemsFactory convertStations:stations trains:@[]];
+    NSArray <id <CollectionItemProtocol>> *items = [StationsListItemsFactory convertStations:stations];
     [self.viewController updateList:items];
     [self startLoadingTrains];
 }
@@ -61,8 +65,17 @@
 #pragma mark - TrainsLoaderDelegate
 
 - (void)didLoadTrains:(NSArray<Train *> *)trains forStation:(Station *)station {
-    NSArray <id <CollectionItemProtocol>> *items = [StationsListItemsFactory convertStations:self.stations trains:trains];
+    NSArray<Train *> *sortedTrains = [TrainsSorter sortedTrainsByArrivingTime:trains];
+    NSRange range = NSMakeRange(0, MIN(3, trains.count));
+    station.arrivingTrains = [trains subarrayWithRange:range];
+    station.arrivingTrains = sortedTrains;
+    NSArray <id <CollectionItemProtocol>> *items = [StationsListItemsFactory convertStations:self.stations];
     [self.viewController updateList:items];
+
+    __weak StationsListPresenter *weakSelf = self;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(30 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [weakSelf loadTrainsForStation:station];
+    });
 }
 
 @end
