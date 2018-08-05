@@ -80,6 +80,8 @@ struct UISettings {
         [subview removeFromSuperview];
     }
 
+    self.facilities = facilities;
+
     struct UISettings settings = [FacilitiesCell defaultSettings];
     CGPoint origin = CGPointMake(settings.containerInset, 0);
 
@@ -114,8 +116,23 @@ struct UISettings {
     [button setBackgroundImage:[FacilitiesCell backgroundImage] forState:UIControlStateNormal];
     button.layer.cornerRadius = 4;
     button.clipsToBounds = YES;
+    [button addTarget:self action:@selector(facilitySelected:) forControlEvents:UIControlEventTouchUpInside];
 
     return button;
+}
+
+- (void)facilitySelected:(UIButton *)sender {
+    //warning: that's ugly. Create any link between buttons and facilities
+    NSString *text = sender.titleLabel.text;
+    if (text.length == 0) {
+        return;
+    }
+    for (Facility *facility in self.facilities) {
+        if ([text isEqualToString:facility.name]) {
+            [self.delegate didSelectFacility:facility];
+            return;
+        }
+    }
 }
 
 @end

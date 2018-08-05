@@ -3,7 +3,7 @@
 
 @interface StationsListPresenter : NSObject
 
-@property (nullable, weak) id <StationsListControllerProtocol> viewController;
+@property (nullable, weak) UIViewController <StationsListControllerProtocol> * viewController;
 
 - (void)getNearbyStations;
 

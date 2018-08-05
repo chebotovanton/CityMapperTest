@@ -6,7 +6,7 @@
 #import "TrainsLoader.h"
 #import "TrainsSorter.h"
 
-@interface StationsListPresenter () <StationsInfoLoaderDelegate, TrainsLoaderDelegate>
+@interface StationsListPresenter () <StationsInfoLoaderDelegate, TrainsLoaderDelegate, FacilitySelectionDelegate>
 
 @property (nullable) StationsInfoLoader *stationsInfoLoader;
 @property (nullable) NSArray <Station *> *stations;
@@ -52,7 +52,7 @@
 
 - (void)didLoadStations:(NSArray <Station *> *)stations {
     self.stations = stations;
-    NSArray <NSArray <id <CollectionItemProtocol>> *> * items= [StationsListItemsFactory convertStations:stations];
+    NSArray <NSArray <id <CollectionItemProtocol>> *> * items = [StationsListItemsFactory convertStations:stations delegate:self];
     [self.viewController updateList:items];
     [self startLoadingTrains];
 }
@@ -68,13 +68,22 @@
     NSArray<Train *> *sortedTrains = [TrainsSorter sortedTrainsByArrivingTime:trains];
     NSRange range = NSMakeRange(0, MIN(3, trains.count));
     station.arrivingTrains = [sortedTrains subarrayWithRange:range];
-    NSArray <NSArray <id <CollectionItemProtocol>> *> *items = [StationsListItemsFactory convertStations:self.stations];
+    NSArray <NSArray <id <CollectionItemProtocol>> *> *items = [StationsListItemsFactory convertStations:self.stations delegate:self];
     [self.viewController updateList:items];
 
     __weak StationsListPresenter *weakSelf = self;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(30 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [weakSelf loadTrainsForStation:station];
     });
+}
+
+#pragma mark -
+
+- (void)didSelectFacility:(nonnull Facility *)facility {
+    UIViewController *facilityVC = [UIViewController new];
+    facilityVC.title = facility.name;
+    facilityVC.view.backgroundColor = [UIColor whiteColor];
+    [self.viewController.navigationController pushViewController:facilityVC animated:YES];
 }
 
 @end

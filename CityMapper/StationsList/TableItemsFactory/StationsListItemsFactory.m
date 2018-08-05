@@ -5,7 +5,8 @@
 
 @implementation StationsListItemsFactory
 
-+ (nonnull NSArray <NSArray <id <CollectionItemProtocol>> *> *)convertStations:(nonnull NSArray <Station *> *)stations {
++ (nonnull NSArray <NSArray <id <CollectionItemProtocol>> *> *)convertStations:(nonnull NSArray <Station *> *)stations
+                                                                      delegate:(id <FacilitySelectionDelegate>)delegate {
 
     //warning: tests!
     NSMutableArray *result = [NSMutableArray new];
@@ -15,7 +16,7 @@
         [stationItems addObject:[[StationItem alloc] initWithStation:station]];
         NSArray *facilities = station.facilities;
         if (facilities.count > 0) {
-            [stationItems addObject:[[FacilityItem alloc] initWithFacilities:facilities]];
+            [stationItems addObject:[[FacilityItem alloc] initWithFacilities:facilities delegate:delegate]];
         }
         for (Train *train in station.arrivingTrains) {
             [stationItems addObject:[[TrainItem alloc] initWithTrain:train]];
