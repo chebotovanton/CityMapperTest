@@ -32,6 +32,12 @@
 		9F2E6FEE2115FAAF00441C1B /* FacilitiesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E6FEC2115FAAF00441C1B /* FacilitiesCell.m */; };
 		9F2E6FEF2115FAAF00441C1B /* FacilitiesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F2E6FED2115FAAF00441C1B /* FacilitiesCell.xib */; };
 		9F2E6FF3211624B100441C1B /* UIImage+ImageWithColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E6FF2211624B100441C1B /* UIImage+ImageWithColor.m */; };
+		9F2E6FF621163F2700441C1B /* Train.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E6FF521163F2700441C1B /* Train.m */; };
+		9F2E6FFB2116431500441C1B /* TrainsLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E6FFA2116431500441C1B /* TrainsLoader.m */; };
+		9F2E6FFE2116432200441C1B /* TrainsParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E6FFD2116432200441C1B /* TrainsParser.m */; };
+		9F2E70032116456600441C1B /* TrainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E70012116456600441C1B /* TrainCell.m */; };
+		9F2E70042116456600441C1B /* TrainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F2E70022116456600441C1B /* TrainCell.xib */; };
+		9F2E70072116D5E600441C1B /* DateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E70062116D5E600441C1B /* DateFormatter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +108,18 @@
 		9F2E6FED2115FAAF00441C1B /* FacilitiesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FacilitiesCell.xib; sourceTree = "<group>"; };
 		9F2E6FF1211624B100441C1B /* UIImage+ImageWithColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageWithColor.h"; sourceTree = "<group>"; };
 		9F2E6FF2211624B100441C1B /* UIImage+ImageWithColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageWithColor.m"; sourceTree = "<group>"; };
+		9F2E6FF421163F2700441C1B /* Train.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Train.h; sourceTree = "<group>"; };
+		9F2E6FF521163F2700441C1B /* Train.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Train.m; sourceTree = "<group>"; };
+		9F2E6FF92116431500441C1B /* TrainsLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainsLoader.h; sourceTree = "<group>"; };
+		9F2E6FFA2116431500441C1B /* TrainsLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainsLoader.m; sourceTree = "<group>"; };
+		9F2E6FFC2116432200441C1B /* TrainsParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainsParser.h; sourceTree = "<group>"; };
+		9F2E6FFD2116432200441C1B /* TrainsParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainsParser.m; sourceTree = "<group>"; };
+		9F2E6FFF2116435200441C1B /* TrainsLoaderDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainsLoaderDelegate.h; sourceTree = "<group>"; };
+		9F2E70002116456600441C1B /* TrainCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainCell.h; sourceTree = "<group>"; };
+		9F2E70012116456600441C1B /* TrainCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainCell.m; sourceTree = "<group>"; };
+		9F2E70022116456600441C1B /* TrainCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainCell.xib; sourceTree = "<group>"; };
+		9F2E70052116D5E600441C1B /* DateFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DateFormatter.h; sourceTree = "<group>"; };
+		9F2E70062116D5E600441C1B /* DateFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateFormatter.m; sourceTree = "<group>"; };
 		BF4F62023941D77FC2EB0E0E /* Pods_CityMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CityMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4146F351FAA93B23550C354 /* Pods-CityMapper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityMapper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CityMapper/Pods-CityMapper.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -193,17 +211,16 @@
 		9F2E6FBB2114B7D100441C1B /* API */ = {
 			isa = PBXGroup;
 			children = (
+				9F2E6FF82116430500441C1B /* TrainsLoader */,
+				9F2E6FF72116419B00441C1B /* StationsLoader */,
+				9F2E6FF421163F2700441C1B /* Train.h */,
+				9F2E6FF521163F2700441C1B /* Train.m */,
 				9F2E6FDD2115824E00441C1B /* Facility.h */,
 				9F2E6FDE2115824E00441C1B /* Facility.m */,
 				9F2E6FC32114B9F000441C1B /* Station.h */,
 				9F2E6FC42114B9F000441C1B /* Station.m */,
 				9F2E6FBC2114B7E500441C1B /* ApiKeyStorage.h */,
 				9F2E6FBD2114B7E500441C1B /* ApiKeyStorage.m */,
-				9F2E6FC22114B9B900441C1B /* StationsInfoLoaderDelegate.h */,
-				9F2E6FBF2114B93B00441C1B /* StationsInfoLoader.h */,
-				9F2E6FC02114B93B00441C1B /* StationsInfoLoader.m */,
-				9F2E6FE82115E78400441C1B /* StationsParser.h */,
-				9F2E6FE92115E78400441C1B /* StationsParser.m */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -211,10 +228,10 @@
 		9F2E6FC62114C76C00441C1B /* StationsList */ = {
 			isa = PBXGroup;
 			children = (
-				9F2E6F8C2114B73400441C1B /* ListVC.h */,
-				9F2E6F8D2114B73400441C1B /* ListVC.m */,
 				9F2E6FE721159BA300441C1B /* Cells */,
 				9F2E6FD9211580BE00441C1B /* TableItemsFactory */,
+				9F2E6F8C2114B73400441C1B /* ListVC.h */,
+				9F2E6F8D2114B73400441C1B /* ListVC.m */,
 				9F2E6FC72114C78000441C1B /* StationsListPresenter.h */,
 				9F2E6FC82114C78000441C1B /* StationsListPresenter.m */,
 				9F2E6FE1211588FE00441C1B /* StationsListControllerProtocol.h */,
@@ -256,6 +273,9 @@
 				9F2E6FEB2115FAAF00441C1B /* FacilitiesCell.h */,
 				9F2E6FEC2115FAAF00441C1B /* FacilitiesCell.m */,
 				9F2E6FED2115FAAF00441C1B /* FacilitiesCell.xib */,
+				9F2E70002116456600441C1B /* TrainCell.h */,
+				9F2E70012116456600441C1B /* TrainCell.m */,
+				9F2E70022116456600441C1B /* TrainCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -265,8 +285,34 @@
 			children = (
 				9F2E6FF1211624B100441C1B /* UIImage+ImageWithColor.h */,
 				9F2E6FF2211624B100441C1B /* UIImage+ImageWithColor.m */,
+				9F2E70052116D5E600441C1B /* DateFormatter.h */,
+				9F2E70062116D5E600441C1B /* DateFormatter.m */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		9F2E6FF72116419B00441C1B /* StationsLoader */ = {
+			isa = PBXGroup;
+			children = (
+				9F2E6FC22114B9B900441C1B /* StationsInfoLoaderDelegate.h */,
+				9F2E6FBF2114B93B00441C1B /* StationsInfoLoader.h */,
+				9F2E6FC02114B93B00441C1B /* StationsInfoLoader.m */,
+				9F2E6FE82115E78400441C1B /* StationsParser.h */,
+				9F2E6FE92115E78400441C1B /* StationsParser.m */,
+			);
+			path = StationsLoader;
+			sourceTree = "<group>";
+		};
+		9F2E6FF82116430500441C1B /* TrainsLoader */ = {
+			isa = PBXGroup;
+			children = (
+				9F2E6FFF2116435200441C1B /* TrainsLoaderDelegate.h */,
+				9F2E6FF92116431500441C1B /* TrainsLoader.h */,
+				9F2E6FFA2116431500441C1B /* TrainsLoader.m */,
+				9F2E6FFC2116432200441C1B /* TrainsParser.h */,
+				9F2E6FFD2116432200441C1B /* TrainsParser.m */,
+			);
+			path = TrainsLoader;
 			sourceTree = "<group>";
 		};
 		C1AAD46FADAD4C52F6DD7F5B /* Frameworks */ = {
@@ -391,6 +437,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F2E70042116456600441C1B /* TrainCell.xib in Resources */,
 				9F2E6F962114B73500441C1B /* LaunchScreen.storyboard in Resources */,
 				9F2E6F932114B73500441C1B /* Assets.xcassets in Resources */,
 				9F2E6FE621159B9D00441C1B /* StationCell.xib in Resources */,
@@ -459,6 +506,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F2E6FF621163F2700441C1B /* Train.m in Sources */,
 				9F2E6FCD2114C7D200441C1B /* LocationManager.m in Sources */,
 				9F2E6FD22115808D00441C1B /* StationItem.m in Sources */,
 				9F2E6FC92114C78000441C1B /* StationsListPresenter.m in Sources */,
@@ -471,11 +519,15 @@
 				9F2E6FEE2115FAAF00441C1B /* FacilitiesCell.m in Sources */,
 				9F2E6F992114B73500441C1B /* main.m in Sources */,
 				9F2E6FD8211580B600441C1B /* TrainItem.m in Sources */,
+				9F2E6FFB2116431500441C1B /* TrainsLoader.m in Sources */,
 				9F2E6FDF2115824E00441C1B /* Facility.m in Sources */,
 				9F2E6FD5211580A900441C1B /* FacilityItem.m in Sources */,
+				9F2E70072116D5E600441C1B /* DateFormatter.m in Sources */,
 				9F2E6FBE2114B7E500441C1B /* ApiKeyStorage.m in Sources */,
 				9F2E6FE521159B9D00441C1B /* StationCell.m in Sources */,
 				9F2E6F8B2114B73400441C1B /* AppDelegate.m in Sources */,
+				9F2E70032116456600441C1B /* TrainCell.m in Sources */,
+				9F2E6FFE2116432200441C1B /* TrainsParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

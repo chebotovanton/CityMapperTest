@@ -3,10 +3,13 @@
 #import "LocationManager.h"
 #import "StationsInfoLoader.h"
 #import "StationsListItemsFactory.h"
+#import "TrainsLoader.h"
 
-@interface StationsListPresenter () <StationsInfoLoaderDelegate>
+@interface StationsListPresenter () <StationsInfoLoaderDelegate, TrainsLoaderDelegate>
 
-@property StationsInfoLoader *stationsInfoLoader;
+@property (nullable) StationsInfoLoader *stationsInfoLoader;
+@property (nullable) TrainsLoader *trainsLoader;
+@property (nullable) NSArray <Station *> *stations;
 
 @end
 
@@ -20,6 +23,15 @@
 
     [[LocationManager shared] detectCurrentCoordinate];
 }
+
+- (void)startLoadingTrains {
+    Station *station = self.stations.firstObject;
+    self.trainsLoader = [TrainsLoader new];
+    self.trainsLoader.delegate = self;
+    [self.trainsLoader loadTrainsForStation:station];
+}
+
+#pragma mark - Location Notification
 
 - (void)coordinateUpdated:(NSNotification *)notification {
     if ([notification.object isKindOfClass:[CLLocation class]]) {
@@ -35,14 +47,22 @@
 #pragma mark - StationsInfoLoaderDelegate
 
 - (void)didLoadStations:(NSArray <Station *> *)stations {
+    self.stations = stations;
     NSArray <id <CollectionItemProtocol>> *items = [StationsListItemsFactory convertStations:stations trains:@[]];
-
     [self.viewController updateList:items];
+    [self startLoadingTrains];
 }
 
 - (void)didFailLoadingStations
 {
     [self.viewController presentError:@"Could not load stations. Try use VPN"];
+}
+
+#pragma mark - TrainsLoaderDelegate
+
+- (void)didLoadTrains:(NSArray<Train *> *)trains forStation:(Station *)station {
+    NSArray <id <CollectionItemProtocol>> *items = [StationsListItemsFactory convertStations:self.stations trains:trains];
+    [self.viewController updateList:items];
 }
 
 @end

@@ -1,40 +1,34 @@
-#import "StationsInfoLoader.h"
+#import "TrainsLoader.h"
 #import <AFNetworking/AFNetworking.h>
 #import "ApiKeyStorage.h"
-#import "StationsParser.h"
+#import "TrainsParser.h"
 
-@implementation StationsInfoLoader
+@implementation TrainsLoader
 
-- (void)loadStationsWithLat:(double)latitude lon:(double)longitude {
+- (void)loadTrainsForStation:(nonnull Station *)station {
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
 
-    NSURLRequest *request = [self requestWithLat:latitude lon:longitude];
+    NSURLRequest *request = [self requestWithStation:station];
 
     NSURLSessionTask *task = [manager dataTaskWithRequest:request
                                            uploadProgress:nil
                                          downloadProgress:nil
                                         completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
-                                            if (error != nil) {
-                                                [self.delegate didFailLoadingStations];
-                                            } else {
-                                                NSArray <Station *> *stations = [StationsParser stationsFrom:responseObject];
-                                                [self.delegate didLoadStations:stations];
+                                            if (error == nil) {
+                                                NSArray <Train *> *trains = [TrainsParser trainsFrom:responseObject];
+                                                [self.delegate didLoadTrains:trains forStation:station];
                                             }
                                         }];
 
     [task resume];
 }
 
-- (nullable NSURLRequest *)requestWithLat:(double)latitude lon:(double)longitude {
-    NSString *baseString = @"https://api.tfl.gov.uk/Stoppoint";
+- (nonnull NSURLRequest *)requestWithStation:(Station *)station {
+    NSString *baseString = [NSString stringWithFormat:@"https://api.tfl.gov.uk/StopPoint/%@/Arrivals", station.stationId];
     NSDictionary *params = @{@"app_id" : [ApiKeyStorage appId],
                              @"app_key" : [ApiKeyStorage appKey],
-                             @"radius" : @1000,
-                             @"modes" : @"tube",
-                             @"lon" : @(-0.1342989),
-                             @"lat" : @51.5102296,
-                             @"stoptypes" : @"NaptanMetroStation,NaptanRailStation"};
+                             @"modes" : @"tube"};
 
     NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] requestWithMethod:@"GET"
                                                                                  URLString:baseString
@@ -42,5 +36,6 @@
                                                                                      error:nil];
     return request;
 }
+
 
 @end

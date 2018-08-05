@@ -1,13 +1,9 @@
-//
-//  TrainItem.h
-//  CityMapper
-//
-//  Created by Anton Chebotov on 04/08/2018.
-//  Copyright © 2018 Anton Chebotov. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
+#import "CollectionItemProtocol.h"
+#import "Train.h"
 
-@interface TrainItem : NSObject
+@interface TrainItem : NSObject <CollectionItemProtocol>
+
+- (id)initWithTrain:(nonnull Train *)train;
 
 @end

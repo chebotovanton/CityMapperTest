@@ -9,9 +9,9 @@
 
     for (NSDictionary *rawStation in rawStations) {
         NSString *name = rawStation[@"commonName"];
-        if (name.length > 0) {
-            Station *station = [Station new];
-            station.name = name;
+        NSString *stationId = rawStation[@"naptanId"];
+        if (name.length > 0 && stationId.length > 0) {
+            Station *station = [[Station alloc] initWithName:name id:stationId];
             NSArray *properties = rawStation[@"additionalProperties"];
             station.facilities = [self facilitiesFrom:properties];
             [result addObject:station];

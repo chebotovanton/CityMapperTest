@@ -1,11 +1,12 @@
 #import "StationsListItemsFactory.h"
 #import "StationItem.h"
 #import "FacilityItem.h"
+#import "TrainItem.h"
 
 @implementation StationsListItemsFactory
 
 + (nonnull NSArray <id <CollectionItemProtocol>> *)convertStations:(NSArray <Station *> *)stations
-                 trains:(NSArray *)trains {
+                                                            trains:(NSArray *)trains {
 
     //warning: tests!
 
@@ -15,6 +16,9 @@
         NSArray *facilities = station.facilities;
         if (facilities.count > 0) {
             [result addObject:[[FacilityItem alloc] initWithFacilities:facilities]];
+        }
+        for (Train *train in trains) {
+            [result addObject:[[TrainItem alloc] initWithTrain:train]];
         }
     }
 
