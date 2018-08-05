@@ -39,6 +39,7 @@
 		9F2E70042116456600441C1B /* TrainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F2E70022116456600441C1B /* TrainCell.xib */; };
 		9F2E70072116D5E600441C1B /* DateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E70062116D5E600441C1B /* DateFormatter.m */; };
 		9F2E700D2117256800441C1B /* TrainsSorter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E700C2117256800441C1B /* TrainsSorter.m */; };
+		9F2E700F21172E6900441C1B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F2E700E21172E6900441C1B /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +124,7 @@
 		9F2E70062116D5E600441C1B /* DateFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateFormatter.m; sourceTree = "<group>"; };
 		9F2E700B2117256800441C1B /* TrainsSorter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainsSorter.h; sourceTree = "<group>"; };
 		9F2E700C2117256800441C1B /* TrainsSorter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainsSorter.m; sourceTree = "<group>"; };
+		9F2E700E21172E6900441C1B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BF4F62023941D77FC2EB0E0E /* Pods_CityMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CityMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4146F351FAA93B23550C354 /* Pods-CityMapper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityMapper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CityMapper/Pods-CityMapper.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -189,6 +191,7 @@
 				9F2E6F942114B73500441C1B /* LaunchScreen.storyboard */,
 				9F2E6F972114B73500441C1B /* Info.plist */,
 				9F2E6F982114B73500441C1B /* main.m */,
+				9F2E700E21172E6900441C1B /* Images.xcassets */,
 			);
 			path = CityMapper;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 			files = (
 				9F2E70042116456600441C1B /* TrainCell.xib in Resources */,
 				9F2E6F962114B73500441C1B /* LaunchScreen.storyboard in Resources */,
+				9F2E700F21172E6900441C1B /* Images.xcassets in Resources */,
 				9F2E6F932114B73500441C1B /* Assets.xcassets in Resources */,
 				9F2E6FE621159B9D00441C1B /* StationCell.xib in Resources */,
 				9F2E6F912114B73400441C1B /* Main.storyboard in Resources */,

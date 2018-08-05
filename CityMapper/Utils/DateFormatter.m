@@ -20,12 +20,11 @@
 + (nonnull NSString *)minutesStringBetween:(NSDate *)laterDate andDate:(NSDate *)earlierDate {
     NSTimeInterval interval = [laterDate timeIntervalSinceDate:earlierDate];
     int minutes = interval / 60;
-
     if (minutes < 1) {
         return @"Due";
+    } else {
+        return [NSString stringWithFormat:@"%i min", minutes];
     }
-
-    return [NSString stringWithFormat:@"%i", minutes];
 }
 
 @end

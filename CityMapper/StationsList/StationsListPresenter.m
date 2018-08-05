@@ -52,7 +52,7 @@
 
 - (void)didLoadStations:(NSArray <Station *> *)stations {
     self.stations = stations;
-    NSArray <id <CollectionItemProtocol>> *items = [StationsListItemsFactory convertStations:stations];
+    NSArray <NSArray <id <CollectionItemProtocol>> *> * items= [StationsListItemsFactory convertStations:stations];
     [self.viewController updateList:items];
     [self startLoadingTrains];
 }
@@ -67,9 +67,8 @@
 - (void)didLoadTrains:(NSArray<Train *> *)trains forStation:(Station *)station {
     NSArray<Train *> *sortedTrains = [TrainsSorter sortedTrainsByArrivingTime:trains];
     NSRange range = NSMakeRange(0, MIN(3, trains.count));
-    station.arrivingTrains = [trains subarrayWithRange:range];
-    station.arrivingTrains = sortedTrains;
-    NSArray <id <CollectionItemProtocol>> *items = [StationsListItemsFactory convertStations:self.stations];
+    station.arrivingTrains = [sortedTrains subarrayWithRange:range];
+    NSArray <NSArray <id <CollectionItemProtocol>> *> *items = [StationsListItemsFactory convertStations:self.stations];
     [self.viewController updateList:items];
 
     __weak StationsListPresenter *weakSelf = self;

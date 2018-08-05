@@ -20,17 +20,28 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pb6-LR-IJT">
-                        <rect key="frame" x="15" y="15" width="368" height="18"/>
-                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                        <rect key="frame" x="50" y="16.5" width="338" height="17"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                         <color key="textColor" red="0.27450980392156865" green="0.27450980392156865" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="undergroundLogo" translatesAutoresizingMaskIntoConstraints="NO" id="evn-g3-xFM">
+                        <rect key="frame" x="0.0" y="10" width="50" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="6rh-7N-SBf"/>
+                            <constraint firstAttribute="height" constant="30" id="xxN-Tx-qNJ"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
             </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="pb6-LR-IJT" firstAttribute="top" secondItem="SEy-5g-ep8" secondAttribute="top" constant="15" id="8do-cb-Jdc"/>
-                <constraint firstItem="SEy-5g-ep8" firstAttribute="trailing" secondItem="pb6-LR-IJT" secondAttribute="trailing" constant="15" id="RON-SZ-Boc"/>
-                <constraint firstItem="pb6-LR-IJT" firstAttribute="leading" secondItem="SEy-5g-ep8" secondAttribute="leading" constant="15" id="csQ-rc-PaG"/>
+                <constraint firstItem="evn-g3-xFM" firstAttribute="centerY" secondItem="SEy-5g-ep8" secondAttribute="centerY" id="QTz-4g-z9q"/>
+                <constraint firstItem="SEy-5g-ep8" firstAttribute="trailing" secondItem="pb6-LR-IJT" secondAttribute="trailing" constant="10" id="RON-SZ-Boc"/>
+                <constraint firstItem="pb6-LR-IJT" firstAttribute="leading" secondItem="evn-g3-xFM" secondAttribute="trailing" id="mu3-Ra-CzQ"/>
+                <constraint firstItem="evn-g3-xFM" firstAttribute="leading" secondItem="SEy-5g-ep8" secondAttribute="leading" id="r26-2y-GFt"/>
+                <constraint firstItem="pb6-LR-IJT" firstAttribute="centerY" secondItem="evn-g3-xFM" secondAttribute="centerY" id="wkO-LJ-0Ms"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
             <size key="customSize" width="398" height="119"/>
@@ -40,4 +51,7 @@
             <point key="canvasLocation" x="-140" y="88.5"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="undergroundLogo" width="240" height="155"/>
+    </resources>
 </document>

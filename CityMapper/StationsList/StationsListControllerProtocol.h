@@ -5,7 +5,7 @@
 
 @protocol StationsListControllerProtocol
 
-- (void)updateList:(nonnull NSArray <id <CollectionItemProtocol>> *)newItems;
+- (void)updateList:(nonnull NSArray <NSArray <id <CollectionItemProtocol>> *> *)newItems;
 - (void)presentError:(nonnull NSString *)description;
 
 @end

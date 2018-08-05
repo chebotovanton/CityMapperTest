@@ -5,20 +5,23 @@
 
 @implementation StationsListItemsFactory
 
-+ (nonnull NSArray <id <CollectionItemProtocol>> *)convertStations:(NSArray <Station *> *)stations {
++ (nonnull NSArray <NSArray <id <CollectionItemProtocol>> *> *)convertStations:(nonnull NSArray <Station *> *)stations {
 
     //warning: tests!
-
     NSMutableArray *result = [NSMutableArray new];
+
     for (Station *station in stations) {
-        [result addObject:[[StationItem alloc] initWithStation:station]];
+        NSMutableArray *stationItems = [NSMutableArray new];
+        [stationItems addObject:[[StationItem alloc] initWithStation:station]];
         NSArray *facilities = station.facilities;
         if (facilities.count > 0) {
-            [result addObject:[[FacilityItem alloc] initWithFacilities:facilities]];
+            [stationItems addObject:[[FacilityItem alloc] initWithFacilities:facilities]];
         }
         for (Train *train in station.arrivingTrains) {
-            [result addObject:[[TrainItem alloc] initWithTrain:train]];
+            [stationItems addObject:[[TrainItem alloc] initWithTrain:train]];
         }
+
+        [result addObject:stationItems];
     }
 
     return result;

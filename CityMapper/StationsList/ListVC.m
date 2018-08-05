@@ -8,7 +8,7 @@
 @interface ListVC() <StationsListControllerProtocol, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 @property (weak) IBOutlet UICollectionView *collectionView;
-@property NSArray <id <CollectionItemProtocol>> *items;
+@property NSArray <NSArray <id <CollectionItemProtocol>> *> *items;
 @property StationsListPresenter *presenter;
 
 @end
@@ -19,7 +19,8 @@
     [super viewDidLoad];
 
     UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
-    layout.minimumLineSpacing = 10;
+    layout.minimumLineSpacing = 0;
+    layout.sectionInset = UIEdgeInsetsMake(10, 0, 10, 0);
     [self.collectionView setCollectionViewLayout:layout];
 
     //warning: Don't like this. ViewController knows about all cells and their nibs. Try to avoid this
@@ -34,7 +35,7 @@
 
 #pragma mark - StationsListControllerProtocol
 
-- (void)updateList:(NSArray <id <CollectionItemProtocol>> *)newItems {
+- (void)updateList:(NSArray <NSArray <id <CollectionItemProtocol>> *> *)newItems {
     self.items = newItems;
 
     [self.collectionView reloadData];
@@ -50,19 +51,26 @@
 
 #pragma mark - UICollectionViewDelegate, UICollectionViewDataSource
 
-- (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return self.items.count;
+}
+
+- (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    NSArray *sectionItems = self.items[section];
+    return sectionItems.count;
 }
 
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    id <CollectionItemProtocol> item = self.items[indexPath.item];
+    NSArray *sectionItems = self.items[indexPath.section];
+    id <CollectionItemProtocol> item = sectionItems[indexPath.item];
 
     return [item cellFor:collectionView indexPath:indexPath];
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    id <CollectionItemProtocol> item = self.items[indexPath.item];
+    NSArray *sectionItems = self.items[indexPath.section];
+    id <CollectionItemProtocol> item = sectionItems[indexPath.item];
 
     return CGSizeMake(collectionView.frame.size.width, [item cellHeightWithWidth:collectionView.frame.size.width]);
 }
