@@ -14,7 +14,6 @@
 		9F2E6F932114B73500441C1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F2E6F922114B73500441C1B /* Assets.xcassets */; };
 		9F2E6F962114B73500441C1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F2E6F942114B73500441C1B /* LaunchScreen.storyboard */; };
 		9F2E6F992114B73500441C1B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E6F982114B73500441C1B /* main.m */; };
-		9F2E6FA32114B73500441C1B /* CityMapperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E6FA22114B73500441C1B /* CityMapperTests.m */; };
 		9F2E6FAE2114B73500441C1B /* CityMapperUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E6FAD2114B73500441C1B /* CityMapperUITests.m */; };
 		9F2E6FBE2114B7E500441C1B /* ApiKeyStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E6FBD2114B7E500441C1B /* ApiKeyStorage.m */; };
 		9F2E6FC12114B93B00441C1B /* StationsInfoLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E6FC02114B93B00441C1B /* StationsInfoLoader.m */; };
@@ -41,6 +40,7 @@
 		9F2E700D2117256800441C1B /* TrainsSorter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E700C2117256800441C1B /* TrainsSorter.m */; };
 		9F2E700F21172E6900441C1B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F2E700E21172E6900441C1B /* Images.xcassets */; };
 		9F2E7012211744D500441C1B /* FacilitiesCellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E70102117444700441C1B /* FacilitiesCellTests.m */; };
+		9F2E701F2118AF3900441C1B /* TrainsParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E701E2118AF3900441C1B /* TrainsParserTests.m */; };
 		E9883F4E20536603C43B822A /* Pods_CityMapperTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26118CC4A443B6D1A935E30F /* Pods_CityMapperTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,7 +76,6 @@
 		9F2E6F972114B73500441C1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F2E6F982114B73500441C1B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9F2E6F9E2114B73500441C1B /* CityMapperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CityMapperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9F2E6FA22114B73500441C1B /* CityMapperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CityMapperTests.m; sourceTree = "<group>"; };
 		9F2E6FA42114B73500441C1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F2E6FA92114B73500441C1B /* CityMapperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CityMapperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F2E6FAD2114B73500441C1B /* CityMapperUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CityMapperUITests.m; sourceTree = "<group>"; };
@@ -131,6 +130,7 @@
 		9F2E700E21172E6900441C1B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9F2E70102117444700441C1B /* FacilitiesCellTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FacilitiesCellTests.m; sourceTree = "<group>"; };
 		9F2E70132117529200441C1B /* FacilitySelectionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FacilitySelectionDelegate.h; sourceTree = "<group>"; };
+		9F2E701E2118AF3900441C1B /* TrainsParserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainsParserTests.m; sourceTree = "<group>"; };
 		BF4F62023941D77FC2EB0E0E /* Pods_CityMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CityMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF8943424C9DA2A643E1CACA /* Pods-CityMapperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityMapperTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CityMapperTests/Pods-CityMapperTests.release.xcconfig"; sourceTree = "<group>"; };
 		E4146F351FAA93B23550C354 /* Pods-CityMapper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityMapper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CityMapper/Pods-CityMapper.debug.xcconfig"; sourceTree = "<group>"; };
@@ -207,8 +207,8 @@
 		9F2E6FA12114B73500441C1B /* CityMapperTests */ = {
 			isa = PBXGroup;
 			children = (
+				9F2E701E2118AF3900441C1B /* TrainsParserTests.m */,
 				9F2E70102117444700441C1B /* FacilitiesCellTests.m */,
-				9F2E6FA22114B73500441C1B /* CityMapperTests.m */,
 				9F2E6FA42114B73500441C1B /* Info.plist */,
 			);
 			path = CityMapperTests;
@@ -597,7 +597,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F2E7012211744D500441C1B /* FacilitiesCellTests.m in Sources */,
-				9F2E6FA32114B73500441C1B /* CityMapperTests.m in Sources */,
+				9F2E701F2118AF3900441C1B /* TrainsParserTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

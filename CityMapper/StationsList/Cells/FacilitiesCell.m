@@ -68,7 +68,8 @@ struct UISettings {
         Facility *facility = facilities[i];
 
         CGFloat buttonWidth = [facility.name sizeWithAttributes:@{NSFontAttributeName : [FacilitiesCell titleFont]}].width + settings.buttonInsets;
-        origin = [FacilitiesCell pointToDraw:buttonWidth settings:settings originPoint:origin widthLimit:widthLimit];        origin.x += buttonWidth;
+        origin = [FacilitiesCell pointToDraw:buttonWidth settings:settings originPoint:origin widthLimit:widthLimit];
+        origin.x += buttonWidth;
         origin.x += settings.horizontalOffset;
     }
 

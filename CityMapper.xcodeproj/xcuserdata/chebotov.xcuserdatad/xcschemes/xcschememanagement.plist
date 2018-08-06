@@ -7,7 +7,30 @@
 		<key>CityMapper.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>2</integer>
+		</dict>
+		<key>CityMapperTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>9F2E6F852114B73400441C1B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9F2E6F9D2114B73500441C1B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9F2E6FA82114B73500441C1B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

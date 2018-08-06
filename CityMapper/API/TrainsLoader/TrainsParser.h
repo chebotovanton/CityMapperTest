@@ -3,6 +3,6 @@
 
 @interface TrainsParser : NSObject
 
-+ (nullable NSArray <Train *> *)trainsFrom:(nullable NSDictionary *)rawDict;
++ (nonnull NSArray <Train *> *)trainsFrom:(nullable id)rawTrains;
 
 @end
