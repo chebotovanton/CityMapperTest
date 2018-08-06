@@ -3,6 +3,6 @@
 
 @interface StationsParser : NSObject
 
-+ (nullable NSArray <Station *> *)stationsFrom:(nullable NSDictionary *)rawDict;
++ (nonnull NSArray <Station *> *)stationsFrom:(nullable id)rawDict;
 
 @end

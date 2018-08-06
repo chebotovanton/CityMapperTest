@@ -41,6 +41,7 @@
 		9F2E700F21172E6900441C1B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F2E700E21172E6900441C1B /* Images.xcassets */; };
 		9F2E7012211744D500441C1B /* FacilitiesCellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E70102117444700441C1B /* FacilitiesCellTests.m */; };
 		9F2E701F2118AF3900441C1B /* TrainsParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E701E2118AF3900441C1B /* TrainsParserTests.m */; };
+		9F2E70212118C4FA00441C1B /* StationsParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E70202118C4FA00441C1B /* StationsParserTests.m */; };
 		E9883F4E20536603C43B822A /* Pods_CityMapperTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26118CC4A443B6D1A935E30F /* Pods_CityMapperTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -131,6 +132,7 @@
 		9F2E70102117444700441C1B /* FacilitiesCellTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FacilitiesCellTests.m; sourceTree = "<group>"; };
 		9F2E70132117529200441C1B /* FacilitySelectionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FacilitySelectionDelegate.h; sourceTree = "<group>"; };
 		9F2E701E2118AF3900441C1B /* TrainsParserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainsParserTests.m; sourceTree = "<group>"; };
+		9F2E70202118C4FA00441C1B /* StationsParserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StationsParserTests.m; sourceTree = "<group>"; };
 		BF4F62023941D77FC2EB0E0E /* Pods_CityMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CityMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF8943424C9DA2A643E1CACA /* Pods-CityMapperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityMapperTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CityMapperTests/Pods-CityMapperTests.release.xcconfig"; sourceTree = "<group>"; };
 		E4146F351FAA93B23550C354 /* Pods-CityMapper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityMapper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CityMapper/Pods-CityMapper.debug.xcconfig"; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 		9F2E6FA12114B73500441C1B /* CityMapperTests */ = {
 			isa = PBXGroup;
 			children = (
+				9F2E70202118C4FA00441C1B /* StationsParserTests.m */,
 				9F2E701E2118AF3900441C1B /* TrainsParserTests.m */,
 				9F2E70102117444700441C1B /* FacilitiesCellTests.m */,
 				9F2E6FA42114B73500441C1B /* Info.plist */,
@@ -598,6 +601,7 @@
 			files = (
 				9F2E7012211744D500441C1B /* FacilitiesCellTests.m in Sources */,
 				9F2E701F2118AF3900441C1B /* TrainsParserTests.m in Sources */,
+				9F2E70212118C4FA00441C1B /* StationsParserTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

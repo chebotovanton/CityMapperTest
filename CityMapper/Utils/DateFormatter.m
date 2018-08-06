@@ -2,6 +2,8 @@
 
 @implementation DateFormatter
 
+//warning: It's worth adding tests here
+
 + (NSDateFormatter *)fromStringFormatter {
     static NSDateFormatter *formatter = nil;
     if (formatter == nil) {
@@ -16,7 +18,6 @@
     return [[DateFormatter fromStringFormatter] dateFromString:dateString];
 }
 
-//tests
 + (nonnull NSString *)minutesStringBetween:(NSDate *)laterDate andDate:(NSDate *)earlierDate {
     NSTimeInterval interval = [laterDate timeIntervalSinceDate:earlierDate];
     int minutes = interval / 60;

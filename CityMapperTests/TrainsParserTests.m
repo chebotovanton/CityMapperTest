@@ -36,4 +36,5 @@
     Train *train = result.firstObject;
     XCTAssertEqualObjects(train.lineName, @"someLine");
 }
+
 @end

@@ -8,7 +8,7 @@
 + (nonnull NSArray <NSArray <id <CollectionItemProtocol>> *> *)convertStations:(nonnull NSArray <Station *> *)stations
                                                                       delegate:(id <FacilitySelectionDelegate>)delegate {
 
-    //warning: tests!
+    //warning: It's worth adding tests here
     NSMutableArray *result = [NSMutableArray new];
 
     for (Station *station in stations) {
